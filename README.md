@@ -1,10 +1,10 @@
 
 ## Parte 1: Dados do Grupo
 
-Tales Alves Dias - rm568839
-Danilo Ricco Rosa - rm571585
-Leonardo Theodoro Moraes - rm570853
-Henzo Weelthyner Chaves Santos - rm571575
+Tales Alves Dias - rm568839  
+Danilo Ricco Rosa - rm571585  
+Leonardo Theodoro Moraes - rm570853  
+Henzo Weelthyner Chaves Santos - rm571575  
 ## Parte 2: Concepção e Planejamento
 
 #### Tema do Projeto -
