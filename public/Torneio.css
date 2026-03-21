@@ -57,7 +57,7 @@ body {
   color: #fff;
 }
 
-/* Estilo do item 'Home' com fundo destacado */
+/* Estilo do item 'Torneios' com fundo destacado */
 .nav-links a.active {
   background: #000000;
   color: #fff;
@@ -103,201 +103,13 @@ body {
   gap: 40px;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-.hero {
-  background: radial-gradient(circle at 70% 50%, rgba(212, 163, 115, 0.15), transparent 40%),
-              linear-gradient(90deg, #0a0a0a 40%, #1a0f0a 100%);
-  color: #fff;
-  padding: 100px 50px;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
+.tournament{
+    padding-top:80px;
+    padding-bottom: 40px;
+    background-color:#000000
 }
 
-.hero-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 50px;
-  align-items: center;
-}
-
-/* Tipografia */
-.subtitle {
-  color: #ffffff;
-  font-size: 12px;
-  letter-spacing: 2px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.hero-content h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 80px;
-  line-height: 1.0;
-  margin: 0 0 20px 0;
-  letter-spacing: 1px;
-}
-
-.highlight {
-  color: #fc5757;
-}
-
-.description {
-  color: #a0a0a0;
-  max-width: 500px;
-  line-height: 1.6;
-  font-size: 16px;
-  margin-bottom: 30px;
-}
-
-/* Botões */
-.hero-btns {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 40px;
-}
-
-.btn-primary {
-  background-color: #fc5757;
-  color: #000;
-  padding: 15px 30px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.btn-secondary {
-  border: 1px solid #fc5757;
-  color: #fff;
-  padding: 15px 30px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-/* Divisor e Stats */
-.divider {
-  border: 0;
-  border-top: 1px solid #222;
-  margin-bottom: 30px;
-}
-
-.stats {
-  display: flex;
-  gap: 40px;
-}
-
-.stat-item h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 32px;
-  margin: 0;
-}
-
-.stat-item p {
-  color: #666;
-  font-size: 11px;
-  letter-spacing: 1px;
-  margin-top: 5px;
-}
-
-/* Visual do Escudo (Lado Direito) */
-.hero-visual {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-.circle-animation {
-  position: relative;
-  width: 400px;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle-animation::before {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(206, 45, 45, 0.2), transparent 70%);
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.circle {
-  position: absolute;
-  border: 1px solid rgba(255, 66, 66, 0.158);
-  border-radius: 50%;
-}
-
-.c1 { width: 400px; height: 400px; }
-.c2 { width: 280px; height: 280px; }
-.c3 { width: 180px; height: 180px; }
-
-section {
-  background-color: #ff808038;
-  padding: 40px 50px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* --- SEÇÃO FEATURES --- */
-.features-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1200px;
-  width: 100%;
-}
-
-.feature-card {
-  background-color: #0e0c0c; /* Fundo levemente mais claro */
-  padding: 30px;
-  border-radius: 15px;
-  border: 1px solid #0e0c0c;
-  transition: 0.3s;
-}
-
-.feature-icon {
-  background-color: #0e0c0c;
-  color: #000000;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  border: 1px solid #3d2e20;
-}
-
-.feature-card h3 {
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: 12px;
-}
-
-.feature-card p {
-  color: #888;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-/* --- SEÇÃO TORNEIOS --- */
-.tournaments {
-  padding-top: 80px;
-}
-
-.tournaments-header {
+.tournament-header{
   max-width: 1200px;
   width: 100%;
   display: flex;
@@ -306,29 +118,171 @@ section {
   margin-bottom: 30px;
 }
 
-.section-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 48px;
-  margin: 0;
-  letter-spacing: 2px;
+.subtitle{
+    color: #fc5757;
+    margin-left: 75px;
 }
 
-.btn-view-all {
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid #110f0f;
-  padding: 10px 20px;
-  border-radius: 8px;
+.title{
+    color: #ffffff;
+    font-size: 55px;
+    padding: 10px;
+    justify-content: center;
+    margin-left: 65px;
+}
+
+.divider {
+  border: 1px solid #fc5757;
+  margin-left: 75px;
+  margin-right: 85%;
+  min-width: 85px;
+  max-width: 85px;
+}
+
+.content{
+color: #ffffff;
+max-width: 650px;
+margin-left: 77px;
+margin-top: 35px;
+line-height: 1,2;
+}
+
+/* Botões */
+
+.buttons {
+  gap: 15px;
+  margin-bottom: 40px;
+  
+ }
+
+.btn-all {
+ text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #ff7c7c;
+  padding: 8px 22px;
+  border-radius: 10px;
   font-size: 14px;
+  background: transparent;
 }
 
-/* Grid de Torneios */
+.btn-all:hover {
+  background: #141414;
+}
+
+
+.btn-valorant {
+ text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #ff7c7c;
+  padding: 8px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  background: transparent;
+}
+
+.btn-valorant:hover {
+  background: #141414;
+}
+
+.btn-marvel {
+ text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #ff7c7c;
+  padding: 8px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  background: transparent;
+}
+
+.btn-marvel:hover {
+  background: #141414;
+}
+
+.btn-cod {
+ text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #ff7c7c;
+  padding: 8px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  background: transparent;
+}
+
+.btn-cod:hover {
+  background: #141414;
+}
+
+.btn-cs {
+ text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #ff7c7c;
+  padding: 8px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  background: transparent;
+}
+
+.btn-cs:hover {
+  background: #141414;
+}
+
+.btn-live {
+ text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #ff7c7c;
+  padding: 8px 22px;
+  border-radius: 10px;
+  font-size: 14px;
+  background: transparent;
+}
+
+.btn-live:hover {
+  background: #141414;
+}
+
+/* Todos os torneios */
+
+.description{
+    line-height: 25px;
+    color: #888282;
+}
+
+.divider1{
+  border: 1px solid #fc5757;
+  min-width: 600px;
+  max-width: 600px;
+  margin-top: 25px;
+  justify-content: center;
+}
+
+.table{
+    color: #9b3f3f;
+    line-height: 40px;
+    word-spacing: 170px;
+    }
+
+.table-esp{
+    word-spacing: 145px;
+    justify-content: center;
+    line-height: 50px;
+    font-weight: 700;
+}
+.alltournaments{
+  background-color: #ff808038;
+  padding: 40px 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+}
+
 .tournaments-grid {
   color: #ffffff;
     display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  max-width: 1200px;
+  max-width: 1500px;
   width: 100%;
 }
 
@@ -337,6 +291,8 @@ section {
   padding: 25px;
   border-radius: 15px;
   border: 1px solid #111111;
+  max-height: 700px;
+  height: 100%;
 }
 
 .card-top {
@@ -346,9 +302,12 @@ section {
 }
 
 .game-tag {
+  background-color: rgba(255, 97, 97, 0.356);
   color: #ffffff;
-  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
   font-size: 12px;
+  font-weight: 700;
 }
 
 .live-tag {
@@ -369,12 +328,17 @@ section {
   color: #fffafa;
   font-size: 13px;
   margin-bottom: 15px;
+  margin-top: 75px;
+}
+
+.rule{
+    padding-top: 35px;
 }
 
 /* Barra de Progresso */
 .progress-bar {
   width: 100%;
-  height: 4px;
+  height: 6px;
   background-color: #414040;
   border-radius: 2px;
   overflow: hidden;
@@ -386,55 +350,57 @@ section {
   border-radius: 2px;
 }
 
-.cta {
-    background-color: #000000;
-    padding: 120px 20px;
-    text-align: center;
+.btn-signon{
+  background: #ff57576c;
+  margin-left: 450px;
+  color: #000000;
+  border: 1px solid #505050;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 22px;
+  text-decoration: none;
 }
 
-.subtitle-yellow {
-    color: #fc5757;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+.btn-signon:hover{
+    background: #ff7d7d;
 }
 
-.cta-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 72px;
-    color: #fff;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
+.full{
+  text-align: center;
+  background: #fd3737bb;
+  margin-left: 450px;
+  color: #000000;
+  border: 1px solid #505050;
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  text-decoration: none;
 }
 
-.cta-text {
-    color: #888;
-    font-size: 18px;
-    margin-bottom: 40px;
-    line-height: 1.5;
+.invite{
+  text-align: center;
+  background: #24242434;
+  margin-left: 450px;
+  color: #ffffff;
+  border: 1px solid #ff7777;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;
 }
 
-.btn-primary-large {
-    background-color: #fc5757;
-    color: #000;
-    padding: 18px 45px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    transition: 0.3s;
-    display: inline-block;
-}
-
-.btn-primary-large:hover {
-    background-color: #d4a373;
-    transform: translateY(-3px);
+.soon{
+  background-color: rgba(79, 82, 255, 0.514);
+  color: #121352;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  border: 1px solid #1e3c28;
 }
 
 /* FOOTER */
 .footer {
-    background-color: #ff808038;
+    background-color: #00000038;
     padding: 80px 80px 50px 80px;
     border-top: 1px solid #141414;
 }
@@ -452,6 +418,10 @@ section {
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
+}
+
+.brand-name{
+    color: #ffffff;
 }
 
 .copyright {
