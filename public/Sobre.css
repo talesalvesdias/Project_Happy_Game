@@ -148,47 +148,241 @@ line-height: 1,2;
 }
 
 .arena{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    padding: 50px 20px;
     background-color: #ff808038;
 }
 
 .arena-grid{
-    text-align: justify;
-    font-size: larger;
-    word-spacing: 8px;
-    padding: 20px;
-    color: #ffffff;
-    max-width: 620px;
-    margin: 60px;
-    }
-
-    .arena-description{
-        padding-top: 10px;
-        font-size: 16px;
-        line-height: 25px;
-        max-width: 620px;
-    }
-
-    .p1{
-        padding-top: 25px;
-    }
-    .p2{
-        padding-top: 25px;
-    }
-    .p3{
-        padding-top: 25px;
+  max-width: 1300px;
+  padding: 1%;
+  margin: 2%;
+  gap: 180px;
+  display: flex;
+  align-items:flex-start;
+  flex-wrap: wrap;
     }
 
     .arena-card{
-        border-color: #000000;
-        max-width: 300px;;
+        border-radius: 15px;
+  padding: 30px 20px;
+  width: 230px;
+  transition: 0.3s;
+  text-align: center;
+  margin-top: 3%;
     }
 
-    .arena-list{
-        display: flex;
+    .arena-description{
+      font-size: 17px;
+      font-weight: 100;
+      line-height: 2;
+        max-width: 540px;
+        color: #ffffff;
     }
+
+    ;.arena-description h2{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: larger;
+      font-weight: 900;
+    }
+
+.p1{
+  line-height: 1.5;
+  margin-top: 15px;
+  text-align: justify;
+}
+
+.p2{
+  line-height: 1.5;
+  margin-top: 15px;
+  text-align: justify;
+}
+
+.p3{
+  line-height: 1.5;
+  margin-top: 15px;
+  text-align: justify;
+}
+    
+
+.timeline {
+  flex: 1;
+  min-width: 300px;
+  background: #000000;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+/* Linha lateral */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 20px;
+  width: 2px;
+  height: 65%;
+  background: #ffffff;
+}
+
+/* Bolinha lateral*/
+.item {
+  width: 12px;
+  height: 12px;
+  background: #ff5757;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.item-p{
+  color: #ff5757;
+}
+
+.timeline h4 {
+  color: #ffffff;
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.item-p1{
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* Objetivos */
+
+    .objective {
+  background-color: #03030338;
+  margin: 35px;
+  padding: 45px;
+  width: 100%;
+}
+
+.obj-description{
+    color: #ff5757;
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+.obj-title{
+    color: #ffffff;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.obj-grid {
+  margin-top: 25px;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  gap: 5px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.obj-card {
+  background-color: #2c0a0a;
+  padding: 25px;
+  border: 1px solid #111111;
+  max-height: 800px;
+}
+
+.number-tag {
+  background-color: rgba(255, 97, 97, 0.356);
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.obj-tag{
+    padding: 10px;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+.obj1{
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 50px;
+}
+
+/* Section DEVS */
+
+.who-subtitle{
+  color: #ff5757;
+  margin-left: 50px;
+  letter-spacing: 2px;
+  line-height: 2;
+}
+
+.who-title{
+  color: #ffffff;
+  margin-left: 50px;
+}
+
+.who-description{
+  color: #ffffff;
+  margin-left: 50px;
+  line-height: 2.5;
+}
+
+.devs{
+  background-color:#ff808038;
+  padding: 80px 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #000000;
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 230px;
+  transition: 0.3s;
+  text-align: center;
+  margin-top: 3%;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+  border-radius: 25px;
+  border: 2px solid #2c1010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff5757;
+  font-weight: bold;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.card h3:hover{
+  color:#e6a6a6;
+}
+
+.card span {
+  font-size: 12px;
+  color: #ffd8d8;
+}
 
     /* FOOTER */
 .footer {
