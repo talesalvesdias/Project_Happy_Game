@@ -12,16 +12,16 @@
 .btn-all:hover, .btn-valorant:hover, .btn-marvel:hover, .btn-cod:hover, .btn-cs:hover, .btn-live:hover { background: #141414; }
 
 .description { line-height: 25px; color: #888282; }
-.divider1 { border: 1px solid var(--color-primary); min-width: 600px; max-width: 600px; margin-top: 25px; }
+.divider1 { border: 1px solid var(--color-primary); min-width: 75vh; margin-top: 25px; }
 
-.table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-.table th { color: #9b3f3f; font-size: 12px; text-transform: uppercase; padding: 8px; text-align: left; border-bottom: 1px solid var(--color-border); }
-.table td { color: var(--color-text); font-weight: 600; padding: 8px; }
+.table th { background-color: var(--color-dark-card); color: var(--color-text); font-size: 12px; text-transform: uppercase; padding: 8px; text-align: left; border-bottom: 1px solid var(--color-border);}
+.table td {  word-spacing: 145px; background-color: var(--color-dark-card); color: var(--color-text); font-weight: 600; padding: 8px; }
 .table-esp { word-spacing: 145px; line-height: 50px; font-weight: 700; color: var(--color-text); }
 
-.alltournaments { background-color: var(--color-section-bg); padding: 40px 50px; display: flex; justify-content: center; flex-direction: column; align-items: center; min-height: 400px; }
-.tournaments-grid { color: var(--color-text); display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1500px; width: 100%; }
-.tournament-card { background-color: var(--color-dark-card); padding: 25px; border-radius: var(--radius-xl); border: 1px solid var(--color-border); max-height: 700px; height: 100%; }
+.alltournaments { background-color: var(--color-section-bg); padding: var(--spacing-xl);}
+.buttons{ display: flex; flex-wrap: wrap; gap: var(--spacing-sm);}
+.tournaments-grid { color: var(--color-text); display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 1500px; width: 100%; }
+.tournament-card { background-color: var(--color-dark-card); padding: var(--spacing-md); border-radius: var(--radius-xl); border: 1px solid var(--color-border); max-height: 90vh;}
 .card-top { display: flex; justify-content: space-between; margin-bottom: 20px; }
 .game-tag { background-color: rgba(255, 97, 97, 0.356); color: var(--color-text); padding: 4px 10px; border-radius: 20px; font-size: 12px; font-weight: 700; }
 .live-tag { background-color: rgba(30, 60, 40, 0.4); color: var(--color-success); padding: 4px 10px; border-radius: 20px; font-size: 11px; border: 1px solid #1e3c28; }
@@ -32,7 +32,7 @@
 .progress-bar { width: 100%; height: 6px; background-color: #414040; border-radius: 2px; overflow: hidden; }
 .progress-fill { height: 100%; background-color: var(--color-primary); border-radius: 2px; }
 
-.btn-signon { background: #ff57576c; margin-left: 450px; color: var(--color-dark); border: 1px solid #505050; padding: 12px; border-radius: var(--radius-lg); font-size: 22px; text-decoration: none; }
+.btn-signon { background: #ff57576c; margin-left: 550px; color: var(--color-dark); border: 1px solid #505050; padding: 12px; border-radius: var(--radius-lg); font-size: 22px; text-decoration: none; }
 .btn-signon:hover { background: #ff7d7d; }
 .full { text-align: center; background: #fd3737bb; margin-left: 450px; color: var(--color-dark); border: 1px solid #505050; padding: 12px; border-radius: 20px; font-size: 14px; text-decoration: none; }
 .invite { text-align: center; background: #24242434; margin-left: 450px; color: var(--color-text); border: 1px solid #ff7777; padding: 12px; border-radius: var(--radius-md); font-size: 14px; text-decoration: none; }
