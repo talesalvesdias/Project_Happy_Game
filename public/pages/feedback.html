@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>VictoryHub | Mensagem Enviada</title>
-    <!-- Importando as fontes para ficar igual à imagem -->
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/feedback.css">
+    <link rel="stylesheet" href="../css/security.css">
 </head>
 <body>
     <!-- NAVBAR -->
@@ -117,6 +119,7 @@
     </footer>
 
     <script src="../js/feedback-animations.js"></script>
+    <script src="../js/cookie-banner.js"></script>
 
 </body>
 </html>

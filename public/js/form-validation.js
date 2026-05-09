@@ -1,81 +1,87 @@
-// VictoryHub - Validação do Formulário de Contato
+// VictoryHub - Validação do Formulário de Contato.
+// Depende de SecurityUtils (security-utils.js).
 
-const form = document.getElementById('contact-form');
+(() => {
+    const MAX_NOME = 80;
+    const MAX_MENSAGEM = 2000;
+    const ASSUNTOS_VALIDOS = new Set([
+        'suporte', 'torneio', 'conta', 'pagamento', 'sugestao', 'denuncia', 'outro'
+    ]);
 
-// Função para validar o formato do email
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contact-form');
+        if (!form) return;
 
-// Função para mostrar erro no campo
-function showError(inputId, errorId) {
-    const input = document.getElementById(inputId);
-    const error = document.getElementById(errorId);
-    input.classList.add('error');
-    error.classList.add('visible');
-}
+        const fields = ['nome', 'email', 'assunto', 'mensagem'];
+        fields.forEach((id) => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const evt = (id === 'assunto') ? 'change' : 'input';
+            el.addEventListener(evt, () => clearError(id, id + '-error'));
+        });
 
-// Função para limpar erro do campo
-function clearError(inputId, errorId) {
-    const input = document.getElementById(inputId);
-    const error = document.getElementById(errorId);
-    input.classList.remove('error');
-    error.classList.remove('visible');
-}
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-// Limpa os erros quando o usuário digita
-document.getElementById('nome').addEventListener('input', () => clearError('nome', 'nome-error'));
-document.getElementById('email').addEventListener('input', () => clearError('email', 'email-error'));
-document.getElementById('assunto').addEventListener('change', () => clearError('assunto', 'assunto-error'));
-document.getElementById('mensagem').addEventListener('input', () => clearError('mensagem', 'mensagem-error'));
+            const nome = (document.getElementById('nome').value || '').trim();
+            const email = (document.getElementById('email').value || '').trim();
+            const assunto = document.getElementById('assunto').value;
+            const mensagem = (document.getElementById('mensagem').value || '').trim();
 
-// Quando o formulário é enviado
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+            let isValid = true;
 
-    // Pega os valores dos campos
-    const nome     = document.getElementById('nome').value.trim();
-    const email    = document.getElementById('email').value.trim();
-    const assunto  = document.getElementById('assunto').value;
-    const mensagem = document.getElementById('mensagem').value.trim();
+            if (!nome || nome.length > MAX_NOME) {
+                showError('nome', 'nome-error');
+                isValid = false;
+            }
+            if (!SecurityUtils.isValidEmail(email)) {
+                showError('email', 'email-error');
+                isValid = false;
+            }
+            if (!ASSUNTOS_VALIDOS.has(assunto)) {
+                showError('assunto', 'assunto-error');
+                isValid = false;
+            }
+            if (!mensagem || mensagem.length > MAX_MENSAGEM) {
+                showError('mensagem', 'mensagem-error');
+                isValid = false;
+            }
 
-    let isValid = true;
+            if (!isValid) return;
 
-    // Valida o nome
-    if (!nome) {
-        showError('nome', 'nome-error');
-        isValid = false;
-    } else {
-        clearError('nome', 'nome-error');
+            // Sanitização defensiva — o backend deve validar e re-escapar antes de persistir/exibir.
+            const payload = {
+                nome: SecurityUtils.escapeHTML(nome),
+                email: SecurityUtils.escapeHTML(email),
+                assunto: SecurityUtils.escapeHTML(assunto),
+                mensagem: SecurityUtils.escapeHTML(mensagem)
+            };
+            // TODO: enviar payload via fetch com header CSRF para endpoint HTTPS.
+            void payload;
+
+            // Token efêmero indica que o redirecionamento veio de um envio válido nesta sessão.
+            try { sessionStorage.setItem('vh_contact_submitted', '1'); } catch (_) {}
+            window.location.href = 'feedback.html';
+        });
+    });
+
+    function showError(inputId, errorId) {
+        const input = document.getElementById(inputId);
+        const error = document.getElementById(errorId);
+        if (input) {
+            input.classList.add('error', 'is-invalid');
+            input.setAttribute('aria-invalid', 'true');
+        }
+        if (error) error.classList.add('visible');
     }
 
-    // Valida o email
-    if (!email || !isValidEmail(email)) {
-        showError('email', 'email-error');
-        isValid = false;
-    } else {
-        clearError('email', 'email-error');
+    function clearError(inputId, errorId) {
+        const input = document.getElementById(inputId);
+        const error = document.getElementById(errorId);
+        if (input) {
+            input.classList.remove('error', 'is-invalid');
+            input.removeAttribute('aria-invalid');
+        }
+        if (error) error.classList.remove('visible');
     }
-
-    // Valida o assunto
-    if (!assunto) {
-        showError('assunto', 'assunto-error');
-        isValid = false;
-    } else {
-        clearError('assunto', 'assunto-error');
-    }
-
-    // Valida a mensagem
-    if (!mensagem) {
-        showError('mensagem', 'mensagem-error');
-        isValid = false;
-    } else {
-        clearError('mensagem', 'mensagem-error');
-    }
-
-    // Se tudo estiver ok, redireciona para página de feedback
-    if (isValid) {
-        window.location.href = 'feedback.html';
-    }
-});
+})();
