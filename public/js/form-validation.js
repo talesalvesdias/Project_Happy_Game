@@ -21,7 +21,7 @@
         });
 
         form.addEventListener('submit', (e) => {
-            e.preventDefault();
+            fields.forEach(id => clearError(id, id + '-error'));
 
             const nome = (document.getElementById('nome').value || '').trim();
             const email = (document.getElementById('email').value || '').trim();
@@ -47,7 +47,12 @@
                 isValid = false;
             }
 
-            if (!isValid) return;
+            if (!isValid) {
+                e.preventDefault();
+                return;
+            }
+
+            e.preventDefault();
 
             // Sanitização defensiva — o backend deve validar e re-escapar antes de persistir/exibir.
             const payload = {
@@ -72,7 +77,10 @@
             input.classList.add('error', 'is-invalid');
             input.setAttribute('aria-invalid', 'true');
         }
-        if (error) error.classList.add('visible');
+        if (error) {
+            error.classList.add('visible');
+            error.style.display = 'block';
+        }
     }
 
     function clearError(inputId, errorId) {
@@ -82,6 +90,9 @@
             input.classList.remove('error', 'is-invalid');
             input.removeAttribute('aria-invalid');
         }
-        if (error) error.classList.remove('visible');
+        if (error) {
+            error.classList.remove('visible');
+            error.style.display = 'none';
+        }
     }
 })();
