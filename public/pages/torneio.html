@@ -151,35 +151,82 @@
     </header>
 
     <main>
-    <!-- TORNEIOS SECTION -->
+  <!-- TORNEIOS SECTION -->
 
-   <section class="tournament">
-        <div class="tournament-header">
-            <div>
-                <p class="subtitle">COMPETIÇÕES ATIVAS</p>
-                <h1 class="title">TORNEIOS</h1>
-                <HR class="divider">
-                    <p class="content">Escolha seu torneio, registre-se e prove que você tem o que é preciso para chegar ao topo. <br> Novos torneios são adicionados semanalmente.</p>
-                    
-            </div>
-        </div>        
-            </div>
-        </div>
-    </section>
+<section class="torneios-section">
 
-    <!-- All tournaments Section -->
+    <div class="torneio-header">
 
-    <section class="alltournaments">
-        <div class="buttons">
-            <a href="#" class="btn-all" data-game="Todos">Todos</a>
-            <a href="#" class="btn-valorant" data-game="Valorant">Valorant</a>
-            <a href="#" class="btn-marvel" data-game="Marvel Rivals">Marvel Rivals</a>
-            <a href="#" class="btn-cod" data-game="COD">Call of Duty</a>
-            <a href="#" class="btn-cs" data-game="CS2">CS2</a>
-            <a href="#" class="btn-live" data-game="Ao Vivo">Ao Vivo</a>
-        </div>
+        <p class="subtitle">
+            COMPETIÇÕES ATIVAS
+        </p>
 
-        <div class="tournaments-grid" id="container-torneios">
+        <h1 class="title">
+            TORNEIOS
+        </h1>
+
+        <hr class="divider">
+
+        <p class="content">
+            Escolha seu torneio, registre-se e prove
+            que você tem o que é preciso para chegar
+            ao topo.
+            <br>
+            Novos torneios são adicionados semanalmente.
+        </p>
+
+    </div>
+
+    <!-- FILTROS -->
+
+    <div class="buttons">
+
+        <button
+            class="filter-btn active"
+            data-game="Todos"
+        >
+            Todos
+        </button>
+
+        <button
+            class="filter-btn"
+            data-game="CS2"
+        >
+            CS2
+        </button>
+
+        <button
+            class="filter-btn"
+            data-game="Valorant"
+        >
+            Valorant
+        </button>
+
+        <button
+            class="filter-btn"
+            data-game="Marvel Rivals"
+        >
+            Marvel Rivals
+        </button>
+
+    </div>
+
+    <!-- CARDS GERADOS PELO JAVASCRIPT -->
+
+    <div class="container-fluid">
+
+    <div
+        id="container-torneios"
+        class="row g-4"
+    ></div>
+
+</div>
+
+</section>
+
+
+<!-- CONTAINER ONDE OS CARDS SERÃO CRIADOS -->
+<div id="container-torneios"></div>
             </div>
     </section>
 

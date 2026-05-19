@@ -29,121 +29,351 @@
 
 
         <!-- Login -->
-        <div class="auth-buttons">
-            <div class="container">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-dark text-white" data-bs-toggle="modal" data-bs-target="#Login">
-           Login
+<div class="auth-buttons">
+
+    <div class="container">
+
+        <!-- BOTÃO LOGIN -->
+        <button
+            type="button"
+            class="btn btn-dark text-white"
+            data-bs-toggle="modal"
+            data-bs-target="#Login"
+        >
+            Login
         </button>
-        <!-- Modal Login-->
-        <div class="modal fade" id="Login" tabindex="-1" aria-labelledby="login" aria-hidden="true">
+
+
+        <!-- MODAL LOGIN -->
+        <div
+            class="modal fade"
+            id="Login"
+            tabindex="-1"
+            aria-labelledby="login"
+            aria-hidden="true"
+        >
+
             <div class="modal-dialog">
+
                 <div class="modal-content bg-dark text-light">
+
                     <div class="modal-header">
-                        <h5 class="modal-title" id="login">Faça seu login</h5>
-                        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                        <h5 class="modal-title" id="login">
+                            Faça seu login
+                        </h5>
+
+                        <button
+                            type="button"
+                            class="btn-close bg-white"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+
                     </div>
+
+
                     <div class="modal-body">
-                        <form id="login-form" action="/api/auth/login" method="POST" novalidate autocomplete="on">
+
+                        <form
+                            id="login-form"
+                            novalidate
+                        >
+
                             <div class="row">
+
                                 <div class="col-12 my-2">
-                                    <label for="login-usuario" class="form-label">Usuário</label>
-                                    <input type="text" name="usuario" id="login-usuario" class="form-control"
-                                           placeholder="Nome de usuário ou e-mail"
-                                           maxlength="254" autocomplete="username" required>
-                                    <div class="field-feedback" id="login-usuario-error"></div>
+
+                                    <label
+                                        for="login-usuario"
+                                        class="form-label"
+                                    >
+                                        Usuário
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        name="usuario"
+                                        id="login-usuario"
+                                        class="form-control"
+                                        placeholder="Nome de usuário ou e-mail"
+                                        maxlength="254"
+                                        required
+                                    >
+
+                                    <div class="invalid-feedback">
+                                        Digite um usuário válido.
+                                    </div>
+
                                 </div>
+
+
                                 <div class="col-12 my-2">
-                                    <label for="login-senha" class="form-label">Senha</label>
-                                    <input type="password" name="senha" id="login-senha" class="form-control"
-                                           placeholder="Senha"
-                                           maxlength="128" autocomplete="current-password" required>
-                                    <div class="field-feedback" id="login-senha-error"></div>
+
+                                    <label
+                                        for="login-senha"
+                                        class="form-label"
+                                    >
+                                        Senha
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        name="senha"
+                                        id="login-senha"
+                                        class="form-control"
+                                        placeholder="Senha"
+                                        maxlength="128"
+                                        required
+                                    >
+
+                                    <div class="invalid-feedback">
+                                        Digite sua senha.
+                                    </div>
+
                                 </div>
-                                <div class="col-12 my-2 d-flex justify-content-end">
-                                </div>
+
                             </div>
+
                     </div>
+
+
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Fazer Login</button>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Fazer Login
+                        </button>
+
                     </div>
+
                     </form>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
 
+
+
     <!-- Cadastro -->
-     <div class="container">
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-dark text-white" data-bs-toggle="modal" data-bs-target="#cadastro">
-           Cadastro
+    <div class="container">
+
+        <!-- BOTÃO CADASTRO -->
+        <button
+            type="button"
+            class="btn btn-dark text-white"
+            data-bs-toggle="modal"
+            data-bs-target="#cadastro"
+        >
+            Cadastro
         </button>
-        <!-- Modal Cadastrar-->
-        <div class="modal fade" id="cadastro" tabindex="-1" aria-labelledby="cadastro" aria-hidden="true">
+
+
+        <!-- MODAL CADASTRO -->
+        <div
+            class="modal fade"
+            id="cadastro"
+            tabindex="-1"
+            aria-labelledby="cadastro"
+            aria-hidden="true"
+        >
+
             <div class="modal-dialog">
+
                 <div class="modal-content bg-dark text-light">
+
                     <div class="modal-header">
-                        <h5 class="modal-title" id="Cadastro">Cadastre-se</h5>
-                        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                        <h5 class="modal-title" id="Cadastro">
+                            Cadastre-se
+                        </h5>
+
+                        <button
+                            type="button"
+                            class="btn-close bg-white"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+
                     </div>
+
+
                     <div class="modal-body">
-                        <form id="cadastro-form" action="/api/auth/register" method="POST" novalidate autocomplete="on">
+
+                        <form
+                            id="cadastro-form"
+                            novalidate
+                        >
+
                             <div class="row">
+
+                                <!-- USUARIO -->
                                 <div class="col-12 my-2">
-                                    <label for="cad-usuario" class="form-label">Usuário</label>
-                                    <input type="text" name="usuario" id="cad-usuario" class="form-control"
-                                           placeholder="Nome de usuário"
-                                           minlength="3" maxlength="30" pattern="[A-Za-z0-9_.-]+"
-                                           autocomplete="username" required>
-                                    <div class="field-feedback" id="cad-usuario-error"></div>
-                                </div>
-                                <div class="col-12 my-2">
-                                    <label for="cad-senha" class="form-label">Senha</label>
-                                    <input type="password" name="senha" id="cad-senha" class="form-control"
-                                           placeholder="Senha"
-                                           minlength="8" maxlength="128"
-                                           autocomplete="new-password" required
-                                           aria-describedby="cad-senha-help">
-                                    <div id="cad-senha-strength" class="password-strength" data-score="0" aria-hidden="true"></div>
-                                    <small id="cad-senha-help" class="field-help">Mínimo 8 caracteres com maiúscula, minúscula, número e símbolo.</small>
-                                    <div class="field-feedback" id="cad-senha-error"></div>
-                                </div>
-                                 <div class="col-12 my-2">
-                                    <label for="cad-email" class="form-label">E-mail</label>
-                                    <input type="email" name="email" id="cad-email" class="form-control"
-                                           placeholder="Seu e-mail"
-                                           maxlength="254" autocomplete="email" required>
-                                    <div class="field-feedback" id="cad-email-error"></div>
-                                </div>
-                                <div class="col-12 my-2">
-                                    <label for="cad-cpf" class="form-label">CPF</label>
-                                    <input type="text" name="cpf" id="cad-cpf" class="form-control"
-                                           placeholder="000.000.000-00"
-                                           inputmode="numeric" maxlength="14"
-                                           autocomplete="off" required>
-                                    <div class="field-feedback" id="cad-cpf-error"></div>
-                                </div>
-                                <div class="col-12 my-2 consent-row">
-                                    <input type="checkbox" id="cad-consent" name="consent" required>
-                                    <label for="cad-consent">
-                                        Li e aceito a <a href="#">Política de Privacidade</a> e os <a href="#">Termos de Uso</a>, autorizando o tratamento dos meus dados conforme a LGPD.
+
+                                    <label
+                                        for="cad-usuario"
+                                        class="form-label"
+                                    >
+                                        Usuário
                                     </label>
+
+                                    <input
+                                        type="text"
+                                        name="usuario"
+                                        id="cad-usuario"
+                                        class="form-control"
+                                        placeholder="Nome de usuário"
+                                        minlength="3"
+                                        maxlength="30"
+                                        required
+                                    >
+
+                                    <div class="invalid-feedback">
+                                        Usuário inválido.
+                                    </div>
+
                                 </div>
-                                <div class="col-12">
-                                    <div class="field-feedback" id="cad-consent-error"></div>
+
+
+                                <!-- SENHA -->
+                                <div class="col-12 my-2">
+
+                                    <label
+                                        for="cad-senha"
+                                        class="form-label"
+                                    >
+                                        Senha
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        name="senha"
+                                        id="cad-senha"
+                                        class="form-control"
+                                        placeholder="Senha"
+                                        minlength="8"
+                                        maxlength="128"
+                                        required
+                                    >
+
+                                    <div class="invalid-feedback">
+                                        A senha deve possuir no mínimo 8 caracteres.
+                                    </div>
+
                                 </div>
+
+
+                                <!-- EMAIL -->
+                                <div class="col-12 my-2">
+
+                                    <label
+                                        for="cad-email"
+                                        class="form-label"
+                                    >
+                                        E-mail
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        id="cad-email"
+                                        class="form-control"
+                                        placeholder="Seu e-mail"
+                                        maxlength="254"
+                                        required
+                                    >
+
+                                    <div class="invalid-feedback">
+                                        Digite um e-mail válido.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- CPF -->
+                                <div class="col-12 my-2">
+
+                                    <label
+                                        for="cad-cpf"
+                                        class="form-label"
+                                    >
+                                        CPF
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        name="cpf"
+                                        id="cad-cpf"
+                                        class="form-control"
+                                        placeholder="000.000.000-00"
+                                        maxlength="14"
+                                        required
+                                    >
+
+                                    <div class="invalid-feedback">
+                                        CPF inválido.
+                                    </div>
+
+                                </div>
+
+
+                                <!-- TERMOS -->
+                                <div class="col-12 my-2 consent-row">
+
+                                    <input
+                                        type="checkbox"
+                                        id="cad-consent"
+                                        required
+                                    >
+
+                                    <label for="cad-consent">
+
+                                        Li e aceito a
+                                        <a href="#">
+                                            Política de Privacidade
+                                        </a>
+                                        e os
+                                        <a href="#">
+                                            Termos de Uso
+                                        </a>
+
+                                    </label>
+
+                                </div>
+
                             </div>
+
                     </div>
+
+
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Cadastrar
+                        </button>
+
                     </div>
+
                     </form>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
-        </div>
+
+</div>
     </nav>
     </header>
 

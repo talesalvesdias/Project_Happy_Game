@@ -46,3 +46,380 @@
   .tournaments-grid { grid-template-columns: 1fr; }
   .divider1 { min-width: 100%; max-width: 100%; }
 }
+
+.progress-bar {
+
+    width: 100%;
+    height: 10px;
+
+    background: #222;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-top: 10px;
+}
+
+.progress-fill {
+
+    height: 100%;
+
+    background: #00ff88;
+
+    transition: 0.5s;
+}
+
+.filter-btn {
+
+    padding: 10px 20px;
+
+    border: none;
+
+    cursor: pointer;
+
+    margin: 5px;
+}
+
+@media(max-width:768px){
+
+    .buttons{
+
+        display:flex;
+        flex-direction:column;
+    }
+
+    .filter-btn{
+
+        width:100%;
+    }
+}
+
+/* ========================================= */
+/* NOVO SISTEMA DE TORNEIOS */
+/* ========================================= */
+
+.torneios-section {
+
+    width: 100%;
+
+    padding: 60px 40px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #000 0%,
+            #1b0707 100%
+        );
+}
+
+
+/* ========================================= */
+/* HEADER */
+/* ========================================= */
+
+.torneio-header h1 {
+
+    font-size: 60px;
+
+    color: white;
+
+    margin-bottom: 20px;
+}
+
+.torneio-header p {
+
+    color: #ccc;
+
+    max-width: 700px;
+
+    line-height: 1.6;
+
+    margin-bottom: 40px;
+}
+
+
+/* ========================================= */
+/* FILTROS */
+/* ========================================= */
+
+.buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 40px;
+
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+
+    background: #1e1e1e;
+
+    color: white;
+
+    border: 1px solid #444;
+
+    padding: 12px 24px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    font-size: 15px;
+}
+
+.filter-btn:hover {
+
+    background: #7a1c1c;
+}
+
+.filter-btn.active {
+
+    background: #ff3434;
+
+    border-color: #ff3434;
+}
+
+
+/* ========================================= */
+/* BOOTSTRAP GRID */
+/* ========================================= */
+
+#container-torneios {
+
+    width: 100%;
+}
+
+#container-torneios .col-12,
+#container-torneios .col-md-6,
+#container-torneios .col-xl-4 {
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+/* ========================================= */
+/* CARD */
+/* ========================================= */
+
+.tournament-card {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    min-height: 420px;
+
+    background: #111;
+
+    border: 1px solid #222;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 0 10px rgba(0,0,0,0.4);
+}
+
+.tournament-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #ff3434;
+}
+
+
+/* ========================================= */
+/* HEADER CARD */
+/* ========================================= */
+
+.card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+/* ========================================= */
+/* BADGES */
+/* ========================================= */
+
+.game-badge {
+
+    background: #ff3434;
+
+    color: white;
+
+    padding: 7px 14px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.status-badge {
+
+    color: #00ff88;
+
+    font-weight: bold;
+
+    font-size: 16px;
+}
+
+
+/* ========================================= */
+/* TITULO */
+/* ========================================= */
+
+.tournament-card h2 {
+
+    color: white;
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    margin: 25px 0;
+}
+
+
+/* ========================================= */
+/* INFO */
+/* ========================================= */
+
+.card-info p {
+
+    color: #ccc;
+
+    margin-bottom: 12px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================= */
+/* BARRA */
+/* ========================================= */
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 10px;
+
+    background: #222;
+
+    border-radius: 50px;
+
+    overflow: hidden;
+
+    margin: 20px 0;
+}
+
+.progress-fill {
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff3434,
+            #ff7b7b
+        );
+
+    transition: 0.5s;
+}
+
+
+/* ========================================= */
+/* BOTÃO */
+/* ========================================= */
+
+.btn-inscrever {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #ff3434;
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn-inscrever:hover {
+
+    background: #ff5555;
+}
+
+
+/* ========================================= */
+/* RESPONSIVO */
+/* ========================================= */
+
+@media(max-width:768px){
+
+    .torneios-section {
+
+        padding: 40px 20px;
+    }
+
+    .torneio-header h1 {
+
+        font-size: 40px;
+    }
+
+    .buttons {
+
+        flex-direction: column;
+    }
+
+    .filter-btn {
+
+        width: 100%;
+    }
+
+    .tournament-card {
+
+        max-width: 100%;
+    }
+
+    .tournament-card h2 {
+
+        font-size: 32px;
+    }
+}
